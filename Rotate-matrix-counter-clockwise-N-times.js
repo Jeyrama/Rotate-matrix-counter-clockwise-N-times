@@ -49,3 +49,20 @@ function rotateAgainstClockwise(matrix, times){
 }
 
 // or
+
+function rotateAgainstClockwise(matrix, times){
+  times = times % 4;
+
+  const helper = {
+    1: () =>
+      matrix.map((el, iArr, arr) =>
+        el.map((_, i) => arr[i][arr.length - 1 - iArr])
+      ),
+    2: () => matrix.reverse().map((el) => el.reverse()),
+    3: () =>
+      matrix.reverse().map((el, iArr, arr) => el.map((_, i) => arr[i][iArr])),
+    0: () => matrix,
+  };
+
+  return helper[times]();
+}
