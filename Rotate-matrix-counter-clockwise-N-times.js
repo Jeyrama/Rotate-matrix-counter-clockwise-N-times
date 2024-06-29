@@ -29,3 +29,21 @@ Note:
 
 
 // Solution
+
+function rotateAgainstClockwise(matrix, times){
+  let turns = times % 4;
+
+  if (!turns)
+    return matrix;
+
+  if (turns !== 2)
+    matrix = matrix.map((row, i) => row.map((col, j) => matrix[j][i]));
+
+  if (turns <= 2)
+    matrix = matrix.reverse();
+
+  if (turns >= 2)
+    matrix = matrix.map(row => row.reverse());
+
+  return matrix;
+}
