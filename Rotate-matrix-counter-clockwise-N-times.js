@@ -47,3 +47,5 @@ function rotateAgainstClockwise(matrix, times){
 
   return matrix;
 }
+
+// or
