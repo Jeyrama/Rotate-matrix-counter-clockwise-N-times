@@ -26,3 +26,6 @@ Note:
   All matrices will be square. 
   Also random tests will have big numbers in input (times to turn).
 */
+
+
+// Solution
